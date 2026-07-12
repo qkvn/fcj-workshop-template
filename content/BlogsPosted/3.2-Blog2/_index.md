@@ -46,7 +46,7 @@ When building a data lake on Amazon S3, a common challenge is that data volume g
 
 ### Architecture Illustration
 
-![How Amazon S3 Intelligent-Tiering Works](/BlogsPosted/image/Intelligent-Tiering.jpg)
+![How Amazon S3 Intelligent-Tiering Works](/content/BlogsPosted/image/Intelligent-Tiering.jpg)
 
 ### References & Published Posts
 

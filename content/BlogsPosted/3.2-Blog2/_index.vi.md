@@ -46,7 +46,7 @@ Khi xây dựng data lake trên S3, một bài toán thường gặp là dữ li
 
 ### Hình ảnh minh họa
 
-![Cơ chế hoạt động của Amazon S3 Intelligent-Tiering](/BlogsPosted/image/Intelligent-Tiering.jpg)
+![Cơ chế hoạt động của Amazon S3 Intelligent-Tiering](/content/BlogsPosted/image/Intelligent-Tiering.jpg)
 
 ### Nguồn tham khảo
 - **Bài đăng trên cộng đồng AWS Study Group FCJ:** [Xem bài viết trên Facebook](https://www.facebook.com/groups/awsstudygroupfcj/permalink/2205182253580068/?rdid=npZRVT1ZR54BwOQp#)

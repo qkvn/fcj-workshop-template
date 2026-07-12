@@ -64,7 +64,7 @@ Operating a large-scale E-commerce platform comes with one of the toughest chall
 
 ### Architecture Diagram
 
-![Samsung Real-Time Pricing Architecture with AWS Lambda Response Streaming](/BlogsPosted/image/Samsung_AWS.jpg)
+![Samsung Real-Time Pricing Architecture with AWS Lambda Response Streaming](/content/BlogsPosted/image/Samsung_AWS.jpg)
 
 ### References & Published Posts
 

@@ -44,7 +44,7 @@ In multiplayer online games, maintaining a fair and safe gaming environment is a
 
 ### Architecture Diagram
 
-![Automated text detection and redaction architecture using Amazon Textract](/BlogsPosted/image/blog3.jpg)
+![Automated text detection and redaction architecture using Amazon Textract](/content/BlogsPosted/image/blog3.jpg)
 
 ### References
 

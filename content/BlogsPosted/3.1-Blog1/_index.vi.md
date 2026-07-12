@@ -64,7 +64,7 @@ Khi vận hành hệ thống E-commerce ở quy mô lớn, một trong những b
 
 ### Hình ảnh minh họa kiến trúc
 
-![Kiến trúc Real-time Pricing của Samsung trên AWS Lambda Response Streaming](/BlogsPosted/image/Samsung_AWS.jpg)
+![Kiến trúc Real-time Pricing của Samsung trên AWS Lambda Response Streaming](/content/BlogsPosted/image/Samsung_AWS.jpg)
 
 ### Nguồn tham khảo & Bài viết đã đăng
 

@@ -25,14 +25,14 @@ chapter: false
 
 &emsp; **Internship Period:** From 04/05/2026 to 04/08/2025
 
-![Your profile picture](/Student-information/Image/avatar.jpg)
+![Your profile picture](/content/Student-information/Image/avatar.jpg)
 
 ### Report Content
 
-1.  [Worklog](/worklog/)
-2.  [Proposal](/Proposal/)
-3.  [Blogs Posted](/BlogsPosted/)
-4.  [Events Participated](/eventParticipated/)
-5.  [Workshop](/Workshop/)
-6.  [Self-Evaluation](/Self-evaluation/)
-7.  [Feedback and Suggestions](/Feedback/)
+1.  [Worklog](/content/worklog/)
+2.  [Proposal](/content/Proposal/)
+3.  [Blogs Posted](/content/BlogsPosted/)
+4.  [Events Participated](/content/eventParticipated/)
+5.  [Workshop](/content/Workshop/)
+6.  [Self-Evaluation](/content/Self-evaluation/)
+7.  [Feedback and Suggestions](/content/Feedback/)

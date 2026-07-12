@@ -55,7 +55,7 @@ The team proposes building an automated system for monitoring goods quality base
 ### Solution Architecture
 
 #### Overall Architecture
-![Image 1](/Proposal/image/DiagramStructure.png)
+![Image 1](/content/Proposal/image/DiagramStructure.png)
 
 The system is designed using an event-driven architecture model, using AWS services to automatically scale according to actual traffic. The entire lifecycle of a goods quality monitoring request is divided into 4 main technology layers:
 

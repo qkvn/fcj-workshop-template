@@ -44,7 +44,7 @@ Trong quá trình phát triển và vận hành các trò chơi trực tuyến n
 
 ### Hình ảnh minh họa kiến trúc
 
-![Kiến trúc tự động phát hiện và làm mờ văn bản trên ảnh đại diện với Amazon Textract](/BlogsPosted/image/blog3.jpg)
+![Kiến trúc tự động phát hiện và làm mờ văn bản trên ảnh đại diện với Amazon Textract](/content/BlogsPosted/image/blog3.jpg)
 
 ### Nguồn tham khảo & Bài viết đã đăng
 

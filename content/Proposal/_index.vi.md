@@ -55,7 +55,7 @@ Nhóm đề xuất xây dựng hệ thống tự động hóa quy trình giám s
 ### Kiến trúc giải pháp
 
 #### Kiến trúc tổng quan
-![Hình ảnh 1](/Proposal/image/DiagramStructure.png)
+![Hình ảnh 1](/content/Proposal/image/DiagramStructure.png)
 
 Hệ thống được thiết kế theo mô hình kiến trúc hướng sự kiện, sử dụng các dịch vụ AWS để tự động co giãn theo lưu lượng thực tế. Toàn bộ vòng đời của một yêu cầu giám sát chất lượng hàng hóa được chia thành 4 lớp công nghệ chính:
 
