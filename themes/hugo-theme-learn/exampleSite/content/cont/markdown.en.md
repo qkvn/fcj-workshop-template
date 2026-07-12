@@ -25,7 +25,7 @@ Some of the key benefits are:
 John Gruber, the author of Markdown, puts it like this:
 
 > The overriding design goal for Markdown’s formatting syntax is to make it as readable as possible. The idea is that a Markdown-formatted document should be publishable as-is, as plain text, without looking like it’s been marked up with tags or formatting instructions. While Markdown’s syntax has been influenced by several existing text-to-HTML filters, the single biggest source of inspiration for Markdown’s syntax is the format of plain text email.
-> -- <cite>John Gruber</cite>
+> -- John Gruber
 
 Grav ships with built-in support for [Markdown](http://daringfireball.net/projects/markdown/) and [Markdown Extra](https://michelf.ca/projects/php-markdown/extra/). You must enable **Markdown Extra** in your `system.yaml` configuration file
 
@@ -41,21 +41,17 @@ Headings from `h1` through `h6` are constructed with a `#` for each level:
 
 ```markdown
 # h1 Heading
-
 ## h2 Heading
-
 ### h3 Heading
-
 #### h4 Heading
-
 ##### h5 Heading
-
 ###### h6 Heading
 ```
 
 Renders to:
-
+<!-- markdownlint-disable MD025 -->
 # h1 Heading
+<!-- markdownlint-enable MD025 -->
 
 ## h2 Heading
 
@@ -98,17 +94,13 @@ This is a comment
 
 The HTML `<hr>` element is for creating a "thematic break" between paragraph-level elements. In markdown, you can create a `<hr>` with any of the following:
 
-- `___`: three consecutive underscores
-- `---`: three consecutive dashes
-- `***`: three consecutive asterisks
+* `___`: three consecutive underscores
+* `---`: three consecutive dashes
+* `***`: three consecutive asterisks
 
 renders to:
 
----
-
----
-
----
+___
 
 ## Body Copy
 
@@ -123,12 +115,7 @@ Lorem ipsum dolor sit amet, graecis denique ei vel, at duo primis mandamus. Et l
 renders to this HTML:
 
 ```html
-<p>
-  Lorem ipsum dolor sit amet, graecis denique ei vel, at duo primis mandamus. Et
-  legere ocurreret pri, animal tacimates complectitur ad cum. Cu eum inermis
-  inimicus efficiendi. Labore officiis his ex, soluta officiis concludaturque ei
-  qui, vide sensibus vim ad.
-</p>
+<p>Lorem ipsum dolor sit amet, graecis denique ei vel, at duo primis mandamus. Et legere ocurreret pri, animal tacimates complectitur ad cum. Cu eum inermis inimicus efficiendi. Labore officiis his ex, soluta officiis concludaturque ei qui, vide sensibus vim ad.</p>
 ```
 
 ## Emphasis
@@ -145,7 +132,9 @@ The following snippet of text is **rendered as bold text**.
 
 renders to:
 
+<!-- markdownlint-disable MD036 -->
 **rendered as bold text**
+<!-- markdownlint-enable MD036 -->
 
 and this HTML
 
@@ -165,7 +154,9 @@ _rendered as italicized text_
 
 renders to:
 
+<!-- markdownlint-disable MD036 -->
 _rendered as italicized text_
+<!-- markdownlint-enable MD036 -->
 
 and this HTML:
 
@@ -173,7 +164,7 @@ and this HTML:
 <em>rendered as italicized text</em>
 ```
 
-### strikethrough
+### Strikethrough
 
 In GFM (GitHub flavored Markdown) you can do strikethroughs.
 
@@ -209,11 +200,7 @@ and this HTML:
 
 ```html
 <blockquote>
-  <p>
-    <strong>Fusion Drive</strong> combines a hard drive with a flash storage
-    (solid-state drive) and presents it as a single logical volume with the
-    space of both drives combined.
-  </p>
+  <p><strong>Fusion Drive</strong> combines a hard drive with a flash storage (solid-state drive) and presents it as a single logical volume with the space of both drives combined.</p>
 </blockquote>
 ```
 
@@ -238,7 +225,7 @@ Renders to:
 ## Notices
 
 {{% notice note %}}
-The old mechanism for notices overriding the block quote syntax (`>>>`) has been deprecated. Notices are now handled via a dedicated plugin called [Markdown Notices](https://github.com/getgrav/grav-plugin-markdown-notices)
+The old mechanism for notices overriding the block quote syntax (`>>>`) has been deprecated.  Notices are now handled via a dedicated plugin called [Markdown Notices](https://github.com/getgrav/grav-plugin-markdown-notices)
 {{% /notice %}}
 
 ## Lists
@@ -250,44 +237,44 @@ A list of items in which the order of the items does not explicitly matter.
 You may use any of the following symbols to denote bullets for each list item:
 
 ```markdown
-- valid bullet
-
 * valid bullet
-
 - valid bullet
++ valid bullet
 ```
 
 For example
 
 ```markdown
-- Lorem ipsum dolor sit amet
-- Consectetur adipiscing elit
-- Integer molestie lorem at massa
-- Facilisis in pretium nisl aliquet
-- Nulla volutpat aliquam velit
++ Lorem ipsum dolor sit amet
++ Consectetur adipiscing elit
++ Integer molestie lorem at massa
++ Facilisis in pretium nisl aliquet
++ Nulla volutpat aliquam velit
   - Phasellus iaculis neque
   - Purus sodales ultricies
   - Vestibulum laoreet porttitor sem
   - Ac tristique libero volutpat at
-- Faucibus porta lacus fringilla vel
-- Aenean sit amet erat nunc
-- Eget porttitor lorem
++ Faucibus porta lacus fringilla vel
++ Aenean sit amet erat nunc
++ Eget porttitor lorem
 ```
 
 Renders to:
 
-- Lorem ipsum dolor sit amet
-- Consectetur adipiscing elit
-- Integer molestie lorem at massa
-- Facilisis in pretium nisl aliquet
-- Nulla volutpat aliquam velit
+<!-- markdownlint-disable MD004 -->
++ Lorem ipsum dolor sit amet
++ Consectetur adipiscing elit
++ Integer molestie lorem at massa
++ Facilisis in pretium nisl aliquet
++ Nulla volutpat aliquam velit
   - Phasellus iaculis neque
   - Purus sodales ultricies
   - Vestibulum laoreet porttitor sem
   - Ac tristique libero volutpat at
-- Faucibus porta lacus fringilla vel
-- Aenean sit amet erat nunc
-- Eget porttitor lorem
++ Faucibus porta lacus fringilla vel
++ Aenean sit amet erat nunc
++ Eget porttitor lorem
+<!-- markdownlint-enable MD004 -->
 
 And this HTML
 
@@ -297,8 +284,7 @@ And this HTML
   <li>Consectetur adipiscing elit</li>
   <li>Integer molestie lorem at massa</li>
   <li>Facilisis in pretium nisl aliquet</li>
-  <li>
-    Nulla volutpat aliquam velit
+  <li>Nulla volutpat aliquam velit
     <ul>
       <li>Phasellus iaculis neque</li>
       <li>Purus sodales ultricies</li>
@@ -318,13 +304,13 @@ A list of items in which the order of items does explicitly matter.
 
 ```markdown
 1. Lorem ipsum dolor sit amet
-2. Consectetur adipiscing elit
-3. Integer molestie lorem at massa
-4. Facilisis in pretium nisl aliquet
-5. Nulla volutpat aliquam velit
-6. Faucibus porta lacus fringilla vel
-7. Aenean sit amet erat nunc
-8. Eget porttitor lorem
+4. Consectetur adipiscing elit
+2. Integer molestie lorem at massa
+8. Facilisis in pretium nisl aliquet
+4. Nulla volutpat aliquam velit
+99. Faucibus porta lacus fringilla vel
+21. Aenean sit amet erat nunc
+6. Eget porttitor lorem
 ```
 
 Renders to:
@@ -394,29 +380,28 @@ In this example, `<section></section>` should be wrapped as **code**.
 HTML:
 
 ```html
-<p>
-  In this example, <code>&lt;section&gt;&lt;/section&gt;</code> should be
-  wrapped as <strong>code</strong>.
-</p>
+<p>In this example, <code>&lt;section&gt;&lt;/section&gt;</code> should be wrapped as <strong>code</strong>.</p>
 ```
 
 ### Indented code
 
-Or indent several lines of code by at least four spaces, as in:
+Or indent several lines of code by at least two spaces, as in:
 
-<pre>
-  // Some comments
-  line 1 of code
-  line 2 of code
-  line 3 of code
-</pre>
-
-Renders to:
-
+```markdown
     // Some comments
     line 1 of code
     line 2 of code
     line 3 of code
+```
+
+Renders to:
+
+<!-- markdownlint-disable MD046 -->
+    // Some comments
+    line 1 of code
+    line 2 of code
+    line 3 of code
+<!-- markdownlint-enable MD046 -->
 
 HTML:
 
@@ -433,15 +418,9 @@ HTML:
 
 ### Block code "fences"
 
-Use "fences" ` ``` ` to block in multiple lines of code.
+Use "fences"  ```` ``` ```` to block in multiple lines of code.
 
-<pre>
-``` markup
-Sample text here...
-```
-</pre>
-
-```
+```markdown
 Sample text here...
 ```
 
@@ -455,30 +434,34 @@ HTML:
 
 ### Syntax highlighting
 
-GFM, or "GitHub Flavored Markdown" also supports syntax highlighting. To activate it, simply add the file extension of the language you want to use directly after the first code "fence", ` ```js `, and syntax highlighting will automatically be applied in the rendered HTML. For example, to apply syntax highlighting to JavaScript code:
+GFM, or "GitHub Flavored Markdown" also supports syntax highlighting. To activate it, simply add the file extension of the language you want to use directly after the first code "fence", ` ```js `, and syntax highlighting will automatically be applied in the rendered HTML.
 
-<pre>
-```js
-grunt.initConfig({
-  assemble: {
-    options: {
-      assets: 'docs/assets',
-      data: 'src/data/*.{json,yml}',
-      helpers: 'src/custom-helpers.js',
-      partials: ['src/partials/**/*.{hbs,md}']
-    },
-    pages: {
-      options: {
-        layout: 'default.hbs'
-      },
-      files: {
-        './': ['src/templates/pages/index.hbs']
+See [Code Highlighting]({{< ref "syntaxhighlight.md" >}}) for additional documentation.
+
+For example, to apply syntax highlighting to JavaScript code:
+
+```plaintext
+    ```js
+    grunt.initConfig({
+      assemble: {
+        options: {
+          assets: 'docs/assets',
+          data: 'src/data/*.{json,yml}',
+          helpers: 'src/custom-helpers.js',
+          partials: ['src/partials/**/*.{hbs,md}']
+        },
+        pages: {
+          options: {
+            layout: 'default.hbs'
+          },
+          files: {
+            './': ['src/templates/pages/index.hbs']
+          }
+        }
       }
-    }
-  }
-};
+    };
+    ```
 ```
-</pre>
 
 Renders to:
 
@@ -508,20 +491,20 @@ grunt.initConfig({
 Tables are created by adding pipes as dividers between each cell, and by adding a line of dashes (also separated by bars) beneath the header. Note that the pipes do not need to be vertically aligned.
 
 ```markdown
-| Option | Description                                                               |
-| ------ | ------------------------------------------------------------------------- |
+| Option | Description |
+| ------ | ----------- |
 | data   | path to data files to supply the data that will be passed into templates. |
-| engine | engine to be used for processing templates. Handlebars is the default.    |
-| ext    | extension to be used for dest files.                                      |
+| engine | engine to be used for processing templates. Handlebars is the default. |
+| ext    | extension to be used for dest files. |
 ```
 
 Renders to:
 
-| Option | Description                                                               |
-| ------ | ------------------------------------------------------------------------- |
+| Option | Description |
+| ------ | ----------- |
 | data   | path to data files to supply the data that will be passed into templates. |
-| engine | engine to be used for processing templates. Handlebars is the default.    |
-| ext    | extension to be used for dest files.                                      |
+| engine | engine to be used for processing templates. Handlebars is the default. |
+| ext    | extension to be used for dest files. |
 
 And this HTML:
 
@@ -533,15 +516,11 @@ And this HTML:
   </tr>
   <tr>
     <td>data</td>
-    <td>
-      path to data files to supply the data that will be passed into templates.
-    </td>
+    <td>path to data files to supply the data that will be passed into templates.</td>
   </tr>
   <tr>
     <td>engine</td>
-    <td>
-      engine to be used for processing templates. Handlebars is the default.
-    </td>
+    <td>engine to be used for processing templates. Handlebars is the default.</td>
   </tr>
   <tr>
     <td>ext</td>
@@ -555,18 +534,18 @@ And this HTML:
 Adding a colon on the right side of the dashes below any heading will right align text for that column.
 
 ```markdown
-| Option |                                                               Description |
-| -----: | ------------------------------------------------------------------------: |
-|   data | path to data files to supply the data that will be passed into templates. |
-| engine |    engine to be used for processing templates. Handlebars is the default. |
-|    ext |                                      extension to be used for dest files. |
+| Option | Description |
+| ------:| -----------:|
+| data   | path to data files to supply the data that will be passed into templates. |
+| engine | engine to be used for processing templates. Handlebars is the default. |
+| ext    | extension to be used for dest files. |
 ```
 
-| Option |                                                               Description |
-| -----: | ------------------------------------------------------------------------: |
-|   data | path to data files to supply the data that will be passed into templates. |
-| engine |    engine to be used for processing templates. Handlebars is the default. |
-|    ext |                                      extension to be used for dest files. |
+| Option | Description |
+| ------:| -----------:|
+| data   | path to data files to supply the data that will be passed into templates. |
+| engine | engine to be used for processing templates. Handlebars is the default. |
+| ext    | extension to be used for dest files. |
 
 ## Links
 
@@ -586,7 +565,7 @@ HTML:
 <a href="http://assemble.io">Assemble</a>
 ```
 
-### Add a title
+### Add a tooltip
 
 ```markdown
 [Upstage](https://github.com/upstage/ "Visit Upstage!")
@@ -608,32 +587,26 @@ Named anchors enable you to jump to the specified anchor point on the same page.
 
 ```markdown
 # Table of Contents
-
-- [Chapter 1](#chapter-1)
-- [Chapter 2](#chapter-2)
-- [Chapter 3](#chapter-3)
+  * [Chapter 1](#chapter-1)
+  * [Chapter 2](#chapter-2)
+  * [Chapter 3](#chapter-3)
 ```
 
 will jump to these sections:
 
 ```markdown
 ## Chapter 1 <a id="chapter-1"></a>
-
 Content for chapter one.
 
 ## Chapter 2 <a id="chapter-2"></a>
-
 Content for chapter one.
 
 ## Chapter 3 <a id="chapter-3"></a>
-
 Content for chapter one.
 ```
-
 **NOTE** that specific placement of the anchor tag seems to be arbitrary. They are placed inline here since it seems to be unobtrusive, and it works.
 
 ## Images {#images}
-
 Images have a similar syntax to links but include a preceding exclamation point.
 
 ```markdown
@@ -662,7 +635,7 @@ Like links, Images also have a footnote style syntax
 
 With a reference later in the document defining the URL location:
 
-[id]: https://octodex.github.com/images/dojocat.jpg "The Dojocat"
+[id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"
 
     [id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"
 
