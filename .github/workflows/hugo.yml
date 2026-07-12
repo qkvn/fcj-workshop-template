@@ -19,7 +19,7 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: "0.123.0" # Hạ xuống bản 0.123.0 để fix lỗi UniqueID của theme cũ
+          hugo-version: "0.110.0" # Hạ xuống bản 0.110.0 để tương thích hoàn toàn với theme cũ
           extended: true
 
       - name: Build website
